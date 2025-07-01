@@ -1,0 +1,170 @@
+:root {
+  --bg: #f0f4f8;
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #007acc;
+  --white: #ffffff;
+  --text: #333;
+}
+
+body.dark-mode {
+  --bg: #0f172a;
+  --primary: #f8fafc;
+  --secondary: #94a3b8;
+  --accent: #38bdf8;
+  --white: #1e293b;
+  --text: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+header {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+header img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  object-fit: cover;
+  margin-top: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 0.3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+#toggleMode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--white);
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#toggleMode:hover {
+  background: #005f99;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-box {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease, background 0.4s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+}
+
+.section-box h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.projects img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005f99;
+}
+
+.contact li::before {
+  content: '📌 ';
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.3rem;
+  }
+
+  .contact ul, .projects ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
